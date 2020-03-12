@@ -1,0 +1,26 @@
+{
+	"success": true,
+	"data": [{
+		"dimCode": "PROVINCE",
+		"dimName": "省份"
+	}, {
+
+		"dimCode": "CITY",
+		"dimName": "城市",
+		"factValueCol": "CITY_ID"
+	}, {
+
+		"dimCode": "DISTRICT",
+		"dimName": "区",
+		"factValueCol": "DISTRICT_ID"
+	}, {
+		"dimCode": "REGION",
+		"dimName": "自定义区",
+		"factValueCol": "REGION_ID"
+	}, {
+		"dimCode": "STORE",
+		"dimName": "门店",
+		"factValueCol": "STORE_ID"
+	}]
+
+}

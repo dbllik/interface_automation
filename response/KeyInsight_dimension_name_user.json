@@ -1,0 +1,36 @@
+{
+	"success": true,
+	"data": [{
+		"dimTypeCode": null,
+		"dimTypeName": null,
+		"dimCode": "SEX",
+		"dimName": "性别",
+		"dimValue": null,
+		"dimValueName": null,
+		"factValueCol": "SEX",
+		"chartType": null,
+		"chartTypeName": null
+	}, {
+		"dimTypeCode": null,
+		"dimTypeName": null,
+		"dimCode": "USER_NEW_FLAG",
+		"dimName": "新老客",
+		"dimValue": null,
+		"dimValueName": null,
+		"factValueCol": "USER_NEW_FLAG",
+		"chartType": null,
+		"chartTypeName": null
+	}, {
+		"dimTypeCode": null,
+		"dimTypeName": null,
+		"dimCode": "USER_LEVEL",
+		"dimName": "会员等级",
+		"dimValue": null,
+		"dimValueName": null,
+		"factValueCol": "USER_LEVEL_ID",
+		"chartType": null,
+		"chartTypeName": null
+	}],
+	"errorCode": null,
+	"errorMessage": null
+}

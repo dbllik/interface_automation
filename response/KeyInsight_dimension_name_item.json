@@ -1,0 +1,26 @@
+{
+	"success": true,
+	"data": [{
+		"dimTypeCode": null,
+		"dimTypeName": null,
+		"dimCode": "ITEM_NO",
+		"dimName": "商品",
+		"dimValue": null,
+		"dimValueName": null,
+		"factValueCol": "ITEM_NO",
+		"chartType": null,
+		"chartTypeName": null
+	}, {
+		"dimTypeCode": null,
+		"dimTypeName": null,
+		"dimCode": "ITEM_TYPE1",
+		"dimName": "品类",
+		"dimValue": null,
+		"dimValueName": null,
+		"factValueCol": "ITEM_TYPE1_ID",
+		"chartType": null,
+		"chartTypeName": null
+	}],
+	"errorCode": null,
+	"errorMessage": null
+}

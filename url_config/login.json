@@ -1,0 +1,15 @@
+{
+  "cases":
+  [{
+     "comment": "测试登录",
+     "respons": "",
+      "params":{
+        "userName": "xxxxx",
+        "password": "xxxx"
+      }}
+  ],
+  "method": "Post",
+  "headers":{},
+  "api_name":"/c/login/login",
+  "domain_name":"https://wakedata.com"
+}

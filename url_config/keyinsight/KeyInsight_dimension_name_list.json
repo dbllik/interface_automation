@@ -1,0 +1,35 @@
+{
+  "cases":
+  [{
+
+    "comment": "KeyInsight维度名称查询_USER",
+    "login": true,
+     "respons": "../response/KeyInsight_dimension_name_user.json",
+     "response_type": "schema",
+      "params":{
+        "dimTypeCode": "USER",
+        "_t": "1576115759"
+      },
+      "data": ""},
+    {
+     "comment": "KeyInsight维度名称查询_ITEM",
+      "login": true,
+     "respons": "../response/KeyInsight_dimension_name_item.json",
+      "params":{
+        "dimTypeCode": "ITEM",
+        "_t": "1576115759"
+      },"data": ""},
+    {
+     "comment": "KeyInsight维度名称查询_AREA",
+      "login": true,
+     "respons": "../response/KeyInsight_dimension_name_area.json",
+      "params":{
+        "dimTypeCode": "AREA",
+        "_t": "1576115759"
+      },"data": ""}
+  ],
+  "method": "GET",
+  "headers":{},
+  "api_name":"/c/da/keyinsight/dimension_name/list",
+  "domain_name":"https://wakedata.com"
+}
