@@ -7,6 +7,7 @@ import configparser
 
 conf = configparser.ConfigParser()
 
+
 def loadconfig_ini(filepath="../config/base.ini"):
     conf.read(filenames=filepath)
     return conf

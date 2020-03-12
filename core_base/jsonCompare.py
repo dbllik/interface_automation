@@ -1,5 +1,7 @@
 # coding: utf-8
 
+import jsonschema.validators as js
+import jsonschema.exceptions as schema_error
 
 class JsonCompare:
     """
@@ -13,19 +15,26 @@ class JsonCompare:
         self.error_message = []
         self.pass_message = []
 
-    def json_compare(self,source_js,targ_js):
-       if isinstance(source_js,dict):
+    def json_compare(self,expect_js,actually_js,compare_type):
+       if compare_type is "schema":
+           self.jsonschema_compare(actually_js, expect_js)
+       elif compare_type is "exact":
+           self.jsonexact_compare(expect_js,actually_js)
+       else:
+           raise Exception("不支持的比较类型" + compare_type)
+
+    def jsonexact_compare(self,source_js,targ_js):
+        if isinstance(source_js, dict):
             for key, value in source_js.items():
                 if key not in targ_js.keys():
                     self.error_message.append(str(key) + ":不存在结果集")
                     continue
                 targ_value = targ_js[key]
-                if isinstance(value,list):
-                    self.compare_list(key,value,targ_value)
+                if isinstance(value, list):
+                    self.compare_list(key, value, targ_value)
                 self.compare_value(key, value, targ_value)
-       else:
-           self.error_message.append("JSON 格式错误，请传入正确的JSON数据：" + source_js)
-
+        else:
+            self.error_message.append("JSON 格式错误，请传入正确的JSON数据：" + source_js)
 
     def get_result(self):
         if self.error_message is not None and len(self.error_message) > 0 : self.result["STATUS"] = False
@@ -54,3 +63,8 @@ class JsonCompare:
             else:
                 self.compare_value(key, expect_value[index], actual_value[index])
 
+    def jsonschema_compare(self,json_data,schema_json):
+        try:
+            js.validate(json_data,schema_json)
+        except schema_error.ValidationError as e:
+            self.error_message.append(str(e))

@@ -51,7 +51,7 @@ class FileCasesRunner:
                 if response_status != 200:
                     compare.result = {"STATUS":False,"ERROR":"请求返回的状态码不为200, 而是：" + str(response_status),"PASS":""}
                 else:
-                    compare.json_compare(expect_respons, actual_reponse.json())
+                    compare.json_compare(expect_respons, actual_reponse.json(),case_base.response_type)
                 result = compare.get_result()
                 if result["STATUS"] is not True:
                     self.results["excute_status"] = "FAIL"
@@ -81,15 +81,3 @@ class FileCasesRunner:
             res = True
         return res
 
-
-
-
-if __name__ == '__main__':
-   fr = FileCasesRunner(["E:/interface_work_file/url_config/KeInsight_main_node_request.json"])
-   res =  fr.run()
-   print(res)
-   for api_name,cases in res["result"].items():
-       print(api_name + "用例如下：")
-       for cas in cases:
-          print(cas.result)
-          print(cas.case["comment"])

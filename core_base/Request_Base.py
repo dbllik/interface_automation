@@ -85,6 +85,7 @@ class CaseBase:
         self.params = cases["params"]
         self.data = cases["data"]
         self.reponse = cases["respons"]
+        self.response_type = cases["response_type"]
 
 
 

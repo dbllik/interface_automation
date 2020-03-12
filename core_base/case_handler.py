@@ -5,14 +5,6 @@ import requests
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# def get_base_path():
-# #     """
-# #     :return: 获取项目绝对路径
-# #     """
-# #     conf = load_config.loadconfig_ini()
-# #     base_path = conf["DEFAULT"]["base_path"]
-# #     return base_path
-
 def get_login_session():
     """
     获取登录session

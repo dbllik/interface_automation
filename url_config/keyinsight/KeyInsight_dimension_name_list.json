@@ -15,6 +15,7 @@
      "comment": "KeyInsight维度名称查询_ITEM",
       "login": true,
      "respons": "../response/KeyInsight_dimension_name_item.json",
+      "response_type": "exact",
       "params":{
         "dimTypeCode": "ITEM",
         "_t": "1576115759"
@@ -23,6 +24,7 @@
      "comment": "KeyInsight维度名称查询_AREA",
       "login": true,
      "respons": "../response/KeyInsight_dimension_name_area.json",
+      "response_type": "exact",
       "params":{
         "dimTypeCode": "AREA",
         "_t": "1576115759"

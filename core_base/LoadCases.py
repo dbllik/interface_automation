@@ -1,10 +1,8 @@
 # coding: utf-8
 
-from core_base import load_config
+
 from core_base import test_cases_config_base
 import os
-bath_path = load_config.loadconfig_ini()["DEFAULT"]["base_path"]
-
 
 
 class LoadCases:
@@ -16,8 +14,6 @@ class LoadCases:
     def __init__(self):
         self.all_files = []
         self.conf_base = test_cases_config_base.TestCasesConfigBase()
-
-
 
     def get_all_files(self,filepath):
         if filepath is None:
@@ -46,7 +42,6 @@ class LoadCases:
             for t in temp_list:
                 all_test.remove(t)
         return all_test
-
 
     def only_tests(self,all_test):
         ol_case = self.conf_base.only_test
